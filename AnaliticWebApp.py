@@ -23,7 +23,7 @@ def cargar_y_procesar_datos(csv_path, archivo):
     return dfAtlanPP
 
 # Rutas relativas para los archivos (ajusta estas rutas según sea necesario)
-base_path = "E:/Marlon/OneDrive - CGIAR/Desktop/Consultoria_ETL_CIAT/WRF-HN ClimaScope/venv/15-11-2023 12_00/"
+base_path = "BrianGallardo/WRF-HN-ClimaScope/15-11-2023 12_00/"
 csv_path = base_path + "Series de Tiempo/"
 raster_path = base_path + "Rasters/"
 
@@ -95,7 +95,7 @@ figAavgT.update_layout(
 # ...
 
 # Carga el archivo raster para cada Departamento
-raster_file_Atlantidaavg = 'E:/Marlon/OneDrive - CGIAR/Desktop/Consultoria_ETL_CIAT/WRF-HN ClimaScope/venv/15-11-2023 12_00/Rasters/Departamentos/Atlántida/avg_dia5.tif'
+raster_file_Atlantidaavg = 'BrianGallardo/WRF-HN-ClimaScope/15-11-2023 12_00/Rasters/Departamentos/Atlántida/avg_dia5.tif'
 with rasterio.open(raster_file_Atlantidaavg) as src:
     raster_array_Atlantidaavg = src.read(1)
     # Obtener transformación de Rasterio para convertir coordenadas de píxeles a geográficas
@@ -114,7 +114,7 @@ dfAtlanPPavgRaster = pd.DataFrame({
 })
 
 # Cargar el archivo GeoJSON
-geojson_pathAPPoligono = 'E:/Marlon/OneDrive - CGIAR/Desktop/Consultoria_ETL_CIAT/WRF-HN ClimaScope/venv/15-11-2023 12_00/GeoJson/Departamentos/Atlantida.geojson'
+geojson_pathAPPoligono = 'BrianGallardo/WRF-HN-ClimaScope/15-11-2023 12_00/GeoJson/Departamentos/Atlantida.geojson'
 APPoligono_gdf = gpd.read_file(geojson_pathAPPoligono) #RAPavg_ (Raster Atlantida Precipitacio Promedio)
 
 # Extraer las coordenadas del contorno
@@ -165,7 +165,7 @@ fig_map_Atlantidaavg.update_layout(
 
 
 #############################################################################
-raster_file_Atlantidaac = 'E:/Marlon/OneDrive - CGIAR/Desktop/Consultoria_ETL_CIAT/WRF-HN ClimaScope/venv/15-11-2023 12_00/Rasters/Departamentos/Atlántida/ppAcum5dias.tif'
+raster_file_Atlantidaac = 'BrianGallardo/WRF-HN-ClimaScope/15-11-2023 12_00/Rasters/Departamentos/Atlántida/ppAcum5dias.tif'
 with rasterio.open(raster_file_Atlantidaac) as src:
     raster_array_Atlantidaac = src.read(1)
     # Obtener transformación de Rasterio para convertir coordenadas de píxeles a geográficas
@@ -184,7 +184,7 @@ dfAtlanPPacRaster = pd.DataFrame({
 })
 
 # Cargar el archivo GeoJSON
-geojson_pathAPoligono = 'E:/Marlon/OneDrive - CGIAR/Desktop/Consultoria_ETL_CIAT/WRF-HN ClimaScope/venv/15-11-2023 12_00/GeoJson/Departamentos/Atlantida.geojson'
+geojson_pathAPoligono = 'BrianGallardo/WRF-HN-ClimaScope/15-11-2023 12_00/GeoJson/Departamentos/Atlantida.geojson'
 APoligono_gdf = gpd.read_file(geojson_pathAPoligono) #RAPavg_ (Raster Atlantida Precipitacio Promedio)
 
 # Extraer las coordenadas del contorno
@@ -232,7 +232,7 @@ fig_map_Atlantidaac.update_layout(
     yaxis_showgrid=False   # Oculta la cuadrícula del eje Y
 )
 #############################################################################
-raster_file_Atlantidamin = 'E:/Marlon/OneDrive - CGIAR/Desktop/Consultoria_ETL_CIAT/WRF-HN ClimaScope/venv/15-11-2023 12_00/Rasters/Departamentos/Atlántida/min_dia5.tif'
+raster_file_Atlantidamin = 'BrianGallardo/WRF-HN-ClimaScope/15-11-2023 12_00/Rasters/Departamentos/Atlántida/min_dia5.tif'
 with rasterio.open(raster_file_Atlantidamin) as src:
     raster_array_Atlantidamin = src.read(1)
     # Obtener transformación de Rasterio para convertir coordenadas de píxeles a geográficas
@@ -251,7 +251,7 @@ dfAtlanPPminRaster = pd.DataFrame({
 })
 
 # Cargar el archivo GeoJSON
-geojson_pathAPoligono = 'E:/Marlon/OneDrive - CGIAR/Desktop/Consultoria_ETL_CIAT/WRF-HN ClimaScope/venv/15-11-2023 12_00/GeoJson/Departamentos/Atlantida.geojson'
+geojson_pathAPoligono = 'BrianGallardo/WRF-HN-ClimaScope/15-11-2023 12_00/GeoJson/Departamentos/Atlantida.geojson'
 APoligono_gdf = gpd.read_file(geojson_pathAPoligono) #RAPavg_ (Raster Atlantida Precipitacio Promedio)
 
 # Extraer las coordenadas del contorno
@@ -300,7 +300,7 @@ fig_map_Atlantidamin.update_layout(
 )
 
 #############################################################################
-raster_file_Atlantidamax = 'E:/Marlon/OneDrive - CGIAR/Desktop/Consultoria_ETL_CIAT/WRF-HN ClimaScope/venv/15-11-2023 12_00/Rasters/Departamentos/Atlántida/max_dia5.tif'
+raster_file_Atlantidamax = 'BrianGallardo/WRF-HN-ClimaScope/15-11-2023 12_00/Rasters/Departamentos/Atlántida/max_dia5.tif'
 with rasterio.open(raster_file_Atlantidamax) as src:
     raster_array_Atlantidamax = src.read(1)
     # Obtener transformación de Rasterio para convertir coordenadas de píxeles a geográficas
@@ -319,7 +319,7 @@ dfAtlanPPmaxRaster = pd.DataFrame({
 })
 
 # Cargar el archivo GeoJSON
-geojson_pathAPoligono = 'E:/Marlon/OneDrive - CGIAR/Desktop/Consultoria_ETL_CIAT/WRF-HN ClimaScope/venv/15-11-2023 12_00/GeoJson/Departamentos/Atlantida.geojson'
+geojson_pathAPoligono = 'BrianGallardo/WRF-HN-ClimaScope/15-11-2023 12_00/GeoJson/Departamentos/Atlantida.geojson'
 APoligono_gdf = gpd.read_file(geojson_pathAPoligono) #RAPavg_ (Raster Atlantida Precipitacio Promedio)
 
 # Extraer las coordenadas del contorno
@@ -371,7 +371,7 @@ fig_map_Atlantidamax.update_layout(
 
 #................Mapa Precipitacion Promedio 3D WRF............
 # Carga el archivo raster para cada Departamento
-raster_file_Atlantidaavg = 'E:/Marlon/OneDrive - CGIAR/Desktop/Consultoria_ETL_CIAT/WRF-HN ClimaScope/venv/15-11-2023 12_00/Rasters/Departamentos/Atlántida/avg_dia5.tif'
+raster_file_Atlantidaavg = 'BrianGallardo/WRF-HN-ClimaScope/15-11-2023 12_00/Rasters/Departamentos/Atlántida/avg_dia5.tif'
 
 with rasterio.open(raster_file_Atlantidaavg) as src:
     raster_array_Atlantidaavg = src.read(1)
@@ -399,7 +399,7 @@ def transform_geojson_to_3davg(Atlantidaavg3d_gdf):
     return x_geojsonPavg3D, y_geojsonPavg3D, z_geojsonPavg3D
 
 # Suponiendo que tienes un archivo GeoJSON para la región
-geojson_pathPavg3D = 'E:/Marlon/OneDrive - CGIAR/Desktop/Consultoria_ETL_CIAT/WRF-HN ClimaScope/venv/15-11-2023 12_00/GeoJson/Departamentos/Atlantida.geojson'
+geojson_pathPavg3D = 'BrianGallardo/WRF-HN-ClimaScope/15-11-2023 12_00/GeoJson/Departamentos/Atlantida.geojson'
 Atlantidaavg3d_gdf = gpd.read_file(geojson_pathPavg3D)
 # Transformar las coordenadas GeoJSON para el gráfico 3D
 # Proyectar a un CRS adecuado (por ejemplo, UTM)
@@ -490,7 +490,7 @@ title_standoff=25
 #############################################
 #...........Mapa Precipitacion Acumulada 3D WRF...........
 # Carga el archivo raster para cada Departamento
-raster_file_Atlantidaac = 'E:/Marlon/OneDrive - CGIAR/Desktop/Consultoria_ETL_CIAT/WRF-HN ClimaScope/venv/15-11-2023 12_00/Rasters/Departamentos/Atlántida/ppAcum5dias.tif'
+raster_file_Atlantidaac = 'BrianGallardo/WRF-HN-ClimaScope/15-11-2023 12_00/Rasters/Departamentos/Atlántida/ppAcum5dias.tif'
 
 with rasterio.open(raster_file_Atlantidaac) as src:
     raster_array_Atlantidaac = src.read(1)
@@ -518,7 +518,7 @@ def transform_geojson_to_3dac(Atlantidaac3d_gdf):
     return x_geojsonac, y_geojsonac, z_geojsonac
 
 # Suponiendo que tienes un archivo GeoJSON para la región
-geojson_pathac = 'E:/Marlon/OneDrive - CGIAR/Desktop/Consultoria_ETL_CIAT/WRF-HN ClimaScope/venv/15-11-2023 12_00/GeoJson/Departamentos/Atlantida.geojson'
+geojson_pathac = 'BrianGallardo/WRF-HN-ClimaScope/15-11-2023 12_00/GeoJson/Departamentos/Atlantida.geojson'
 Atlantidaac3d_gdf = gpd.read_file(geojson_pathac)
 # Transformar las coordenadas GeoJSON para el gráfico 3D
 # Proyectar a un CRS adecuado (por ejemplo, UTM)
@@ -611,7 +611,7 @@ title_standoff=25
 #############################################
 #...........Mapa Precipitacion Minima 3D WRF...........
 # Carga el archivo raster para cada Departamento
-raster_file_Atlantidamin = 'E:/Marlon/OneDrive - CGIAR/Desktop/Consultoria_ETL_CIAT/WRF-HN ClimaScope/venv/15-11-2023 12_00/Rasters/Departamentos/Atlántida/min_dia5.tif'
+raster_file_Atlantidamin = 'BrianGallardo/WRF-HN-ClimaScope/15-11-2023 12_00/Rasters/Departamentos/Atlántida/min_dia5.tif'
 
 with rasterio.open(raster_file_Atlantidamin) as src:
     raster_array_Atlantidamin = src.read(1)
@@ -639,7 +639,7 @@ def transform_geojson_to_3dmin(Atlantidamin3d_gdf):
     return x_geojsonmin, y_geojsonmin, z_geojsonmin
 
 # Suponiendo que tienes un archivo GeoJSON para la región
-geojson_pathmin = 'E:/Marlon/OneDrive - CGIAR/Desktop/Consultoria_ETL_CIAT/WRF-HN ClimaScope/venv/15-11-2023 12_00/GeoJson/Departamentos/Atlantida.geojson'
+geojson_pathmin = 'BrianGallardo/WRF-HN-ClimaScope/15-11-2023 12_00/GeoJson/Departamentos/Atlantida.geojson'
 Atlantidamin3d_gdf = gpd.read_file(geojson_pathmin)
 # Transformar las coordenadas GeoJSON para el gráfico 3D
 # Proyectar a un CRS adecuado (por ejemplo, UTM)
@@ -731,7 +731,7 @@ title_standoff=25
 #############################################
 #...........Mapa Precipitacion Maxima 3D WRF...........
 # Carga el archivo raster para cada Departamento
-raster_file_Atlantidamax = 'E:/Marlon/OneDrive - CGIAR/Desktop/Consultoria_ETL_CIAT/WRF-HN ClimaScope/venv/15-11-2023 12_00/Rasters/Departamentos/Atlántida/max_dia5.tif'
+raster_file_Atlantidamax = 'BrianGallardo/WRF-HN-ClimaScope/15-11-2023 12_00/Rasters/Departamentos/Atlántida/max_dia5.tif'
 
 with rasterio.open(raster_file_Atlantidamax) as src:
     raster_array_Atlantidamax = src.read(1)
@@ -759,7 +759,7 @@ def transform_geojson_to_3dmax(Atlantidamax3d_gdf):
     return x_geojsonmax, y_geojsonmax, z_geojsonmax
 
 # Suponiendo que tienes un archivo GeoJSON para la región
-geojson_pathmax = 'E:/Marlon/OneDrive - CGIAR/Desktop/Consultoria_ETL_CIAT/WRF-HN ClimaScope/venv/15-11-2023 12_00/GeoJson/Departamentos/Atlantida.geojson'
+geojson_pathmax = 'BrianGallardo/WRF-HN-ClimaScope/15-11-2023 12_00/GeoJson/Departamentos/Atlantida.geojson'
 Atlantidamax3d_gdf = gpd.read_file(geojson_pathmax)
 # Transformar las coordenadas GeoJSON para el gráfico 3D
 # Proyectar a un CRS adecuado (por ejemplo, UTM)
@@ -862,7 +862,7 @@ app = dash.Dash(__name__, suppress_callback_exceptions=True, external_stylesheet
                             'content': 'width=device-width, initial-scale=1'}])
 server = app.server
 app.title = "WRF-HN ClimaScope"
-app.index_string = open('E:/Marlon/OneDrive - CGIAR/Desktop/Consultoria_ETL_CIAT/WRF-HN ClimaScope/template/template.html', 'r').read()
+app.index_string = open('BrianGallardo/WRF-HN-ClimaScope/WRF-HN ClimaScope/template/template.html', 'r').read()
 spinner_wrapper = html.Div(
     dbc.Spinner(type="grow", color="dark", children=[html.Div(id="spinner-output")]),
     id="spinner-wrapper"
