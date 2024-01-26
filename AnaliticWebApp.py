@@ -1,5 +1,6 @@
 import dash
-from dash import dcc, dash_table, html, Input, Output
+from dash import Dash, dcc, dash_table, html, Input, Output
+import os
 from dash.dependencies import State
 import time
 import pandas as pd
@@ -860,6 +861,7 @@ dropdown_menu_style = {
 app = dash.Dash(__name__, suppress_callback_exceptions=True, external_stylesheets=[dbc.themes.CERULEAN],
                 meta_tags=[{'name': 'viewport',
                             'content': 'width=device-width, initial-scale=1'}])
+server = app.server
 app.title = "WRF-HN ClimaScope"
 app.index_string = open('E:/Marlon/OneDrive - CGIAR/Desktop/Consultoria_ETL_CIAT/WRF-HN ClimaScope/template/template.html', 'r').read()
 spinner_wrapper = html.Div(
@@ -1424,4 +1426,4 @@ def update_footer(pathname):
 
 # Ejecutar la app
 if __name__ == '__main__':
-    app.run_server(debug=False, host='127.0.0.1', port=8080)
+    app.run(debug=True)
