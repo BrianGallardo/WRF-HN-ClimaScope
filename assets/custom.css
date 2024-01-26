@@ -1,0 +1,11 @@
+.dropdown-menu a:hover, .dropdown-menu a:focus {
+    background-color: green !important;  /* Cambia 'green' por el color verde específico que prefieras */
+    color: white;  /* Cambia el color del texto si es necesario */
+}
+
+.my-custom-class {
+    background-color: rgb(227, 238, 215) !important;
+    border: 1.5px solid rgb(9, 39, 9);
+    padding: 15px;
+    border-radius: 9px;
+}
