@@ -1,6 +1,5 @@
 import dash
-from dash import Dash, dcc, dash_table, html, Input, Output
-import os
+from dash import dcc, dash_table, html, Input, Output
 from dash.dependencies import State
 import time
 import pandas as pd
